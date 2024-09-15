@@ -35,5 +35,3 @@ if [ "$1" == "y" ]; then
 else
   echo "Passing SSH configuration..."
 fi
-
-
