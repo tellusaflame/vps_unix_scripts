@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# bash <(wget -qO- https://raw.githubusercontent.com/tellusaflame/vps_unix_scripts/main/run_scripts.sh)
-# wget -O setup_script.sh https://raw.githubusercontent.com/tellusaflame/vps_unix_scripts/main/run_scripts.sh
-# chmod +x run_scripts.sh
-
 sudo clear
 
 echo "Installing Git..."
@@ -21,11 +17,11 @@ echo ""
 echo "  ---      Going through scripts      ---  "
 echo ""
 
-./update_system.sh
-./install_docker.sh
-./configure_ssh.sh
-./install_configure_ufw.sh
-./install_3x_ui.sh
+./update_system.sh y
+./install_docker.sh n
+./configure_ssh.sh n
+./install_configure_ufw.sh y
+./install_3x_ui.sh y
 
 echo ""
 echo "  ---  Going through scripts completed  ---  "
