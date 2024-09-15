@@ -4,7 +4,7 @@
 # wget -O setup_script.sh https://raw.githubusercontent.com/tellusaflame/vps_unix_scripts/main/run_scripts.sh
 # chmod +x run_scripts.sh
 
-clear
+sudo clear
 
 echo "Installing Git..."
 sudo apt-get install git -y &>> setup_script.log
