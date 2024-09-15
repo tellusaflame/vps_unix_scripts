@@ -19,8 +19,8 @@ echo ""
 
 ./update_system.sh y
 ./install_docker.sh y
-./configure_ssh.sh n
-./install_configure_ufw.sh n
+./configure_ssh.sh y
+./install_configure_ufw.sh y
 ./install_3x_ui.sh y
 
 echo ""
