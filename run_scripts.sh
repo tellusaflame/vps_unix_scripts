@@ -8,6 +8,8 @@ run_command() {
     eval "$1 &>> ~/vps_unix_scripts/scripts/setup_script.log"
 }
 
+touch ~/vps_unix_scripts/scripts/setup_script.log
+
 echo "Installing Git..."
 run_command "sudo apt-get install git -y"
 
