@@ -39,6 +39,7 @@ echo ""
 echo "Confirm ufw enabling please:"
 sudo ufw enable
 
+echo ""
 echo "Setup completed successfully! Rebooting in 5s..."
 sleep 5
 
