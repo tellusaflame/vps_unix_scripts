@@ -12,13 +12,14 @@ echo "Installing Git..."
 run_command "sudo apt-get install git -y"
 
 echo "Cloning repo with scripts..."
-run_command "git clone git@github.com:tellusaflame/vps_unix_scripts.git"
+run_command "git clone https://github.com/tellusaflame/vps_unix_scripts.git"
 
 cd ~/vps_unix_scripts/scripts
 
 echo "Making scripts executable..."
 chmod +x *.sh
 
+echo "Going through scripts..."
 ./update_system.sh
 ./install_docker.sh
 ./configure_ssh.sh
