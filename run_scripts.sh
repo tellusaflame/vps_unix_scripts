@@ -5,7 +5,7 @@
 # chmod +x run_scripts.sh
 
 run_command() {
-    eval "$1 &>> ~/vps_unix_scripts/scripts/setup_script.log"
+    eval "$1 > /dev/null 2>&1"
 }
 
 touch ~/vps_unix_scripts/scripts/setup_script.log
