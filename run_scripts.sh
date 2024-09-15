@@ -18,18 +18,28 @@ echo "Making scripts executable..."
 chmod +x *.sh
 
 echo ""
-echo "Going through scripts:"
+echo "  ---      Going through scripts      ---  "
+echo ""
+
 ./update_system.sh
 ./install_docker.sh
 ./configure_ssh.sh
 ./install_configure_ufw.sh
 ./install_3x_ui.sh
 
-echo "Confirm ufw enabling please:"
 echo ""
+echo "  ---  Going through scripts completed  ---  "
+echo ""
+
+echo "Removing clonned repo..."
+cd ~/
+sudo rm -rf vps_unix_scripts
+
+echo ""
+echo "Confirm ufw enabling please:"
 sudo ufw enable
 
-echo "Setup completed successfully! Rebooting..."
+echo "Setup completed successfully! Rebooting in 5s..."
 sleep 5
 
 sudo reboot now
