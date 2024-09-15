@@ -4,17 +4,11 @@
 # wget -O setup_script.sh https://raw.githubusercontent.com/tellusaflame/vps_unix_scripts/main/run_scripts.sh
 # chmod +x run_scripts.sh
 
-run_command() {
-    eval "$1 > /dev/null 2>&1"
-}
-
-touch ~/vps_unix_scripts/scripts/setup_script.log
-
 echo "Installing Git..."
-run_command "sudo apt-get install git -y"
+sudo apt-get install git -y &>> setup_script.log
 
 echo "Cloning repo with scripts..."
-run_command "git clone https://github.com/tellusaflame/vps_unix_scripts.git"
+git clone https://github.com/tellusaflame/vps_unix_scripts.git &>> setup_script.log
 
 cd ~/vps_unix_scripts/scripts
 
@@ -35,4 +29,4 @@ sudo ufw enable
 echo "Setup completed successfully! Rebooting..."
 sleep 5
 
-run_command "sudo reboot now"
+sudo reboot now
