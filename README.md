@@ -9,6 +9,6 @@ bash <(wget -qO- https://raw.githubusercontent.com/tellusaflame/vps_unix_scripts
 
 Скачать скрипт и выполнить самостоятельно:
 ```bash
-wget -O setup_script.sh https://raw.githubusercontent.com/tellusaflame/vps_unix_scripts/main/run_scripts.sh
+wget -O run_scripts.sh https://raw.githubusercontent.com/tellusaflame/vps_unix_scripts/main/run_scripts.sh
 chmod +x run_scripts.sh
 ```
