@@ -28,7 +28,7 @@ if [ "$1" == "y" ]; then
     echo "enabled = true"
     echo "port = 55555"
     echo "filter = sshd"
-    echo "logpath = /var/log/auth.log  ; Путь к логам зависит от вашей системы"
+    echo "logpath = /var/log/auth.log"
     echo "maxretry = 5"
     echo "bantime = 86400"
     echo "findtime = 3600"
