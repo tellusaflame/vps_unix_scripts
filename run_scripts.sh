@@ -6,6 +6,7 @@ echo "Installing Git..."
 sudo apt-get install git -y &>> setup_script.log
 
 echo "Cloning repo with scripts..."
+cd ~/
 git clone https://github.com/tellusaflame/vps_unix_scripts.git &>> setup_script.log
 
 cd ~/vps_unix_scripts/scripts
