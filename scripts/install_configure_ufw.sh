@@ -13,6 +13,7 @@ if [ "$1" == "y" ]; then
   run_command "sudo ufw allow 55555"
   run_command "sudo ufw allow 443"
   run_command "sudo ufw allow 2053"
+  run_command "sudo ufw logging off"
 
 else
   echo "Passing UFW installation and configuration..."
