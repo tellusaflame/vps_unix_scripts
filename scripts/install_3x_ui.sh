@@ -10,7 +10,7 @@ if [ "$1" == "y" ]; then
   run_command "cd ~"
   run_command "git clone https://github.com/MHSanaei/3x-ui.git"
   run_command "cd 3x-ui"
-  run_command "git checkout v2.4.8"
+  run_command "git checkout v2.4.9"
   run_command "docker compose up -d"
 
   echo "Copying scripts - 3X-UI update & VLESS UDP/TCP masking..."
