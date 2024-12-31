@@ -10,9 +10,9 @@ if [ "$1" == "y" ]; then
   run_command "sudo apt -y install ufw"
   run_command "sudo ufw default deny incoming"
   run_command "sudo ufw default allow outgoing"
-  run_command "sudo ufw allow 55555"
-  run_command "sudo ufw allow 443"
-  run_command "sudo ufw allow 2053"
+  run_command "sudo ufw allow 55555 comment 'SSH'"
+  run_command "sudo ufw allow 443 comment '3X-UI VLESS'"
+  run_command "sudo ufw allow 2053 comment '3X-UI Panel'"
   run_command "sudo ufw logging off"
 
 else
