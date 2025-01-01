@@ -25,7 +25,7 @@ echo ""
 ./install_3x_ui.sh y
 
 echo ""
-echo "  ---  Going through scripts completed  ---  "
+echo "  ---  Executing scripts completed  ---  "
 echo ""
 
 echo "Removing clonned repo..."
