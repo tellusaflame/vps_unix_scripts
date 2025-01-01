@@ -11,4 +11,5 @@ bash <(wget -qO- https://raw.githubusercontent.com/tellusaflame/vps_unix_scripts
 ```bash
 wget -O run_scripts.sh https://raw.githubusercontent.com/tellusaflame/vps_unix_scripts/main/run_scripts.sh
 chmod +x run_scripts.sh
+./run_scripts.sh
 ```
