@@ -12,7 +12,8 @@ if [ "$1" == "y" ]; then
   run_command "sudo ufw default allow outgoing"
   run_command "sudo ufw allow 55555 comment 'SSH'"
   run_command "sudo ufw allow 443 comment '3X-UI VLESS'"
-  run_command "sudo ufw allow 2053 comment '3X-UI Panel'"
+  run_command "sudo ufw allow 2053 comment '3X-UI Panel TEMP'"
+  run_command "sudo ufw allow 55556 comment '3X-UI Panel'"
   run_command "sudo ufw logging off"
 
 else
