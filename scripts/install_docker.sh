@@ -13,6 +13,13 @@ if [ "$1" == "y" ]; then
   echo "Installing Docker Compose..."
   run_command "sudo apt-get install docker-compose -y"
 
+  echo "Configuring Docker daemon to use ufw instead of iptables by itself..."
+  sudo mkdir -p /etc/docker
+  echo '{ "iptables": false }' | sudo tee /etc/docker/daemon.json > /dev/null
+
+  echo "Restarting Docker service..."
+  run_command "sudo systemctl restart docker"
+
 else
   echo "Passing Docker installation..."
 fi
