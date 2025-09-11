@@ -14,7 +14,10 @@ if [ "$1" == "y" ]; then
   run_command "sudo ufw allow 443 comment '3X-UI VLESS'"
   run_command "sudo ufw allow 2053 comment '3X-UI Panel TEMP'"
   run_command "sudo ufw allow 55556 comment '3X-UI Panel TEMP, must change to tailnet & home IP'"
+  run_command "sudo ufw allow in on tailscale0 comment 'allow Tailscale network'"
+  run_command "sudo ufw allow in on wt0 comment 'allow NetBird network'"
   run_command "sudo ufw logging off"
+  
 
 else
   echo "Passing UFW installation and configuration..."
