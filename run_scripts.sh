@@ -23,6 +23,8 @@ echo ""
 ./configure_ssh.sh y
 ./install_configure_ufw.sh y
 ./install_3x_ui.sh y
+./install_ts_netbird.sh y
+./install_vnstat.sh y
 
 echo ""
 echo "  ---  Executing scripts completed  ---  "
