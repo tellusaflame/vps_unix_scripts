@@ -8,10 +8,28 @@ if [ "$1" == "y" ]; then
 
   echo "Installing 3X-UI panel..."
   run_command "cd ~"
-  run_command "git clone https://github.com/MHSanaei/3x-ui.git"
-  run_command "cd 3x-ui"
-  run_command "git checkout v2.7.0"
-  run_command "docker compose up -d"
+  run_command "mkdir -p ~/3x-ui"
+  run_command "cd ~/3x-ui"
+  
+  cat > ~/3x-ui/docker-compose.yml <<EOF
+services:
+  3xui:
+    image: ghcr.io/mhsanaei/3x-ui:latest
+    container_name: 3xui_app
+    # hostname: yourhostname <- optional
+    volumes:
+      - \$PWD/db/:/etc/x-ui/
+      - \$PWD/cert/:/root/cert/
+    environment:
+      XRAY_VMESS_AEAD_FORCED: "false"
+      XUI_ENABLE_FAIL2BAN: "true"
+    tty: true
+    network_mode: host
+    restart: unless-stopped
+EOF
+
+  echo "Starting 3X-UI..."
+  run_command "cd ~/3x-ui && docker compose up -d"
 
   echo "Copying scripts - 3X-UI update & VLESS UDP/TCP masking..."
   run_command "cd ~"
