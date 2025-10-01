@@ -20,8 +20,7 @@ if [ "$1" == "y" ]; then
   run_command "sudo chmod -x /etc/update-motd.d/95-hwe-eol"
   run_command "sudo chmod -x /etc/update-motd.d/98-fsck-at-reboot"
   run_command "sudo chmod +x /etc/update-motd.d/50-landscape-sysinfo"
-
-  echo "MOTD setup completed."
+  
 else
   echo "Passing MOTD customization..."
 fi
