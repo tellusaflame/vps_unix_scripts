@@ -25,6 +25,7 @@ echo ""
 ./install_3x_ui.sh y
 ./install_ts_netbird.sh y
 ./install_vnstat.sh y
+./install_nethogs.sh y
 ./disable_welcome.sh y
 
 echo ""
