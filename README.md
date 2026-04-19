@@ -13,3 +13,9 @@ wget -O run_scripts.sh https://raw.githubusercontent.com/tellusaflame/vps_unix_s
 chmod +x run_scripts.sh
 ./run_scripts.sh
 ```
+Скачать скрипт очистки системы и создания selfsni сайта:
+```bash
+wget -O run_scripts.sh https://raw.githubusercontent.com/tellusaflame/vps_unix_scripts/main/clean.sh
+wget -O run_scripts.sh https://raw.githubusercontent.com/tellusaflame/vps_unix_scripts/main/fakesite.sh
+chmod +x rclean.sh fakesite.sh
+```
