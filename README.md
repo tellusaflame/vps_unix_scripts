@@ -17,5 +17,5 @@ chmod +x run_scripts.sh
 ```bash
 wget -O run_scripts.sh https://raw.githubusercontent.com/tellusaflame/vps_unix_scripts/main/clean.sh
 wget -O run_scripts.sh https://raw.githubusercontent.com/tellusaflame/vps_unix_scripts/main/fakesite.sh
-chmod +x rclean.sh fakesite.sh
+chmod +x clean.sh fakesite.sh
 ```
